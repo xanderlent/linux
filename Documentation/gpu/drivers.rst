@@ -5,6 +5,7 @@ GPU Driver Documentation
 .. toctree::
 
    amdgpu/index
+   gna
    i915
    mcde
    meson
