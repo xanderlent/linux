@@ -11459,6 +11459,13 @@ S:	Supported
 F:	drivers/infiniband/hw/irdma/
 F:	include/uapi/rdma/irdma-abi.h
 
+INTEL GNA PCI DRIVER
+M:	Maciej Kwapulinski <maciej.kwapulinski@linux.intel.com>
+M:	Alexander F. Lent <lx@xanderlent.com>
+S:	Maintained
+F:	Documentation/accel/igna.rst
+F:	drivers/accel/igna/*
+
 INTEL GPIO DRIVERS
 M:	Andy Shevchenko <andy@kernel.org>
 L:	linux-gpio@vger.kernel.org

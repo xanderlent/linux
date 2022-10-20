@@ -25,6 +25,7 @@ menuconfig DRM_ACCEL
 	  and debugfs).
 
 source "drivers/accel/habanalabs/Kconfig"
+source "drivers/accel/igna/Kconfig"
 source "drivers/accel/ivpu/Kconfig"
 source "drivers/accel/qaic/Kconfig"
 
