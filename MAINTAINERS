@@ -11465,6 +11465,7 @@ M:	Alexander F. Lent <lx@xanderlent.com>
 S:	Maintained
 F:	Documentation/accel/igna.rst
 F:	drivers/accel/igna/*
+F:	include/uapi/drm/igna_accel.h
 
 INTEL GPIO DRIVERS
 M:	Andy Shevchenko <andy@kernel.org>
