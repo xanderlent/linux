@@ -48,15 +48,25 @@ static char *ivpu_firmware;
 module_param_named_unsafe(firmware, ivpu_firmware, charp, 0644);
 MODULE_PARM_DESC(firmware, "NPU firmware binary in /lib/firmware/..");
 
+#define IVPU_FW_PATH_37XX_BIN		"vpu_37xx.bin"
+#define IVPU_FW_PATH_37XX_V0_BIN	"intel/vpu/vpu_37xx_v0.0.bin"
+#define IVPU_FW_PATH_40XX_BIN		"vpu_40xx.bin"
+#define IVPU_FW_PATH_40XX_V0_BIN	"intel/vpu/vpu_40xx_v0.0.bin"
+
 static struct {
 	int gen;
 	const char *name;
 } fw_names[] = {
-	{ IVPU_HW_37XX, "vpu_37xx.bin" },
-	{ IVPU_HW_37XX, "intel/vpu/vpu_37xx_v0.0.bin" },
-	{ IVPU_HW_40XX, "vpu_40xx.bin" },
-	{ IVPU_HW_40XX, "intel/vpu/vpu_40xx_v0.0.bin" },
+	{ IVPU_HW_37XX, IVPU_FW_PATH_37XX_BIN },
+	{ IVPU_HW_37XX, IVPU_FW_PATH_37XX_V0_BIN },
+	{ IVPU_HW_40XX, IVPU_FW_PATH_40XX_BIN },
+	{ IVPU_HW_40XX, IVPU_FW_PATH_40XX_V0_BIN },
 };
+
+MODULE_FIRMWARE(IVPU_FW_PATH_37XX_BIN);
+MODULE_FIRMWARE(IVPU_FW_PATH_37XX_V0_BIN);
+MODULE_FIRMWARE(IVPU_FW_PATH_40XX_BIN);
+MODULE_FIRMWARE(IVPU_FW_PATH_40XX_V0_BIN);
 
 static int ivpu_fw_request(struct ivpu_device *vdev)
 {
